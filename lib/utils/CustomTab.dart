@@ -19,7 +19,7 @@ class CustomTab extends StatelessWidget {
         children: [
           Image.asset(icon, width: 24, height: 24),
           SizedBox(width: 8), // Add some space between the icon and text
-          Text(text , style: TextStyle(color: )),),
+          Text(text , style: TextStyle(color: Utils().hexToColor(color)))
         ],
       ),
     );
