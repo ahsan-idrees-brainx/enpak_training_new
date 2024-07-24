@@ -14,7 +14,7 @@ class CustomTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Tab(
-      child: Row(
+      child: Container( child : Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(icon, width: 24, height: 24),
@@ -22,6 +22,7 @@ class CustomTab extends StatelessWidget {
           Text(text , style: TextStyle(color: Utils().hexToColor(color)))
         ],
       ),
+      )
     );
   }
 }

@@ -6,6 +6,7 @@ class Appcolors {
   static const String dark_gray = '#8E909A';
   static const String gray_bottom_bar_color = '#4A4E5D';
   static const String selected_tab_color = '#0D1426';
+  static const String selected_tab_dark_gray = '#202123';
 
 
 }

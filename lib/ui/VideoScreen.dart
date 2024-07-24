@@ -1,5 +1,6 @@
 import 'package:enpak_training_new/utils/AppColors.dart';
 import 'package:enpak_training_new/utils/CustomTab.dart';
+import 'package:enpak_training_new/utils/VideoCustomTab.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
@@ -38,14 +39,15 @@ class _VideoScreenState extends State<VideoScreen> {
         children: [
           Column(
             children: [
-              Padding(padding: EdgeInsets.only(top: 40 , right: 15 , left: 15),
-                  child: Container(color: Colors.black,
+              Padding(padding: EdgeInsets.only(top: 45 , right: 18 , left: 18),
+                  child: Container(
+                    decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(17)),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    CustomTab(text: 'Feed', icon: 'assets/images/ic_feed.png',color: Appcolors.grayhint,),
-                    CustomTab(text: 'Video', icon: 'assets/images/ic_video.png',color: Appcolors.grayhint),
-                    CustomTab(text: 'Podcast', icon: 'assets/images/ic_podcast.png',color: Appcolors.grayhint)
+                    Videocustomtab(text: 'Feed', icon: 'assets/images/ic_feed.png',color: Appcolors.grayhint,),
+                    Videocustomtab(text: 'Video', icon: 'assets/images/ic_video.png',color: Appcolors.grayhint),
+                    Videocustomtab(text: 'Podcast', icon: 'assets/images/ic_podcast.png',color: Appcolors.grayhint)
                   ],
                 ),
               )
@@ -75,13 +77,13 @@ class _VideoScreenState extends State<VideoScreen> {
                       backgroundImage: AssetImage('assets/images/user_pic.png'),
                     ),
                     SizedBox(width: 10),
-                    Text('Username', style: TextStyle(color: Colors.white)),
+                    Text('Username', style: TextStyle(color: Colors.grey)),
                   ],
                 ),
                 SizedBox(height: 10),
                 Text(
                   'Video Description',
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.grey),
                 ),
               ],
             ),
@@ -91,11 +93,11 @@ class _VideoScreenState extends State<VideoScreen> {
             right: 20,
             child: Column(
               children: [
-                Icon(Icons.favorite, color: Colors.white),
-                SizedBox(height: 10),
-                Icon(Icons.message, color: Colors.white),
-                SizedBox(height: 10),
-                Icon(Icons.share, color: Colors.white),
+                Icon(Icons.favorite),
+                SizedBox(height: 20),
+                Icon(Icons.message),
+                SizedBox(height: 20),
+                Icon(Icons.share),
               ],
             ),
           ),
